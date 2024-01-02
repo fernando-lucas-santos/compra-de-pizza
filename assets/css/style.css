@@ -1,0 +1,22 @@
+body{
+    background-color: #e6e6e6 !important;
+}
+.adicionar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    /* height: 60px;  */
+    margin-top: -10px;
+    /* padding-bottom: 4px; */
+    /* background-color: aqua; */
+}
+
+.adicionar .btn{
+    padding: 0;
+    border: 0;
+}
+
+.modelo{
+    display: none !important;
+}
