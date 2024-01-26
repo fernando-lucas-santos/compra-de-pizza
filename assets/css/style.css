@@ -20,3 +20,7 @@ body{
 .modelo{
     display: none !important;
 }
+
+.imagem{
+    width: 50%;
+}
