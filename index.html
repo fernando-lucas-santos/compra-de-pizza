@@ -65,6 +65,18 @@
 
     <script src="assets/script/pizzas.js"></script>
     <script src="assets/script/script.js"></script>
+    <script>
+        window.addEventListener('resize', ()=>{
+    let largura = window.innerWidth
+    if (largura < 769){
+    document.querySelector('.pizzaArea').classList.remove('row-cols-3')
+    document.querySelector('.pizzaArea').classList.add('row-cols-1')
+   
+}else{
+    document.querySelector('.pizzaArea').classList.add('row-cols-3')
+}
+})
+    </script>
     
 </body>
 </html>

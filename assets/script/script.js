@@ -2,16 +2,7 @@ const c = (el)=> document.querySelector(el)
 const cALL = (el)=> document.querySelector(el)
 
 
-window.addEventListener('resize', ()=>{
-    let largura = window.innerWidth
-    if (largura < 769){
-    document.querySelector('.pizzaArea').classList.remove('row-cols-3')
-    document.querySelector('.pizzaArea').classList.add('row-cols-1')
-   
-}else{
-    document.querySelector('.pizzaArea').classList.add('row-cols-3')
-}
-})
+
   
 pizzaJson.map((element, index)=>{
   let pizzaItem = c('.container-geral ').cloneNode(true)
