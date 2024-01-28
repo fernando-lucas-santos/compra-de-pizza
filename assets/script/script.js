@@ -26,3 +26,11 @@ pizzaJson.map((element, index)=>{
 
 })
 
+  // const myModalEl = document.getElementById('btn--modal')
+  //   myModalEl.addEventListener('show.bs.hidden', (event) => {
+  //     myModalEl.show(myModalEl)
+  //   })
+
+    const myModal = new bootstrap.Modal('btn--modal', {
+      keyboard: false
+    })
