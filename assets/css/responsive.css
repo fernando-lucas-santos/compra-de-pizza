@@ -1,0 +1,18 @@
+ @media only screen and (max-width: 768px) {
+     .container-modelos{
+   width: 90% !important;
+   margin: auto;
+} 
+}
+
+@media only screen and (max-width: 500px){
+
+    /* modal */
+    .tamanhos 
+    .tamanhoP,
+    .tamanhoM,
+    .tamanhoG{
+        font-size: 0.7rem !important;
+        color: red;
+    }
+}

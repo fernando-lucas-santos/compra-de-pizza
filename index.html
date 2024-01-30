@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaria</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -12,8 +13,7 @@
 <body>
     
     <div class="container-fluid modelo row row-cols-3 ">
-        <div class="container-geral d-flex align-items-center justify-content-center flex-column">
-            
+        <div class="container-modelos d-flex align-items-center justify-content-center flex-column">
 
                 <a href="#" id="btn--modal" class="imagem d-flex align-items-center flex-column" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <img src=""   class="img-fluid" alt="Pizzas">
@@ -45,19 +45,19 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         
-        <div class="modal-body d-flex gap-5">
+        <div class="modal-body d-flex ">
             
           <div class="img-modal">
-            <img src="assets/images/pizza.png" width="90%" alt="">
+            <img src="assets/images/pizza.png" width="100%" alt="">
           </div>
           <div class="container--modal">
             <h5>Nome da pizza</h5>
             <div class="tamanho">
                 <span class="text-muted">TAMANHO</span>
                 <div class="tamanhos d-flex">
-                    <div class="tamanhoP text-center">PEQUENA <br> <span></span></div>
-                    <div class="tamanhoM text-center">MÉDIO <br> <span></span></div>
-                    <div class="tamanhoG text-center">GRANDE <br> <span></span></div> 
+                    <div class="tamanhoP text-center">PEQUENA -- <span></span></div>
+                    <div class="tamanhoM text-center">MÉDIO -- <span></span></div>
+                    <div class="tamanhoG text-center">GRANDE -- <span></span></div> 
                 </div>
                 
             </div>
@@ -79,12 +79,13 @@
     
     
     <h1>Pizzas</h1>
-    <div class="pizzaArea container-fluid row row-cols-3">
+    <div class="pizzaArea container-fluid row row-cols-3 m-auto">
             
     </div>
 
     
     <script>
+      /*
         window.addEventListener('resize', ()=>{
     let largura = window.innerWidth
     if (largura < 769){
@@ -94,7 +95,7 @@
     }else{
         document.querySelector('.pizzaArea').classList.add('row-cols-3')
     }
-    })
+    })*/
     </script>
     <script src="assets/script/pizzas.js"></script>
     <script src="assets/script/script.js"></script>

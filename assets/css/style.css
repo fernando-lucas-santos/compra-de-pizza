@@ -3,6 +3,10 @@ body{
 }
 
 /* modelo */
+/* .container-modelos{
+    min-width: 300px;
+    margin: auto;
+} */
 .adicionar{
     display: flex;
     justify-content: center;
@@ -25,20 +29,34 @@ body{
 }
 
  /* modal */
+ .modal-dialog {
+    max-width: 700px !important;
+   
+ }
+ .modal-body{
+    margin: 30px 0px;
+    padding: 0 10px !important;
+ }
  .img-modal{
-    width: 40%;
+    width: 50%;
+    margin-right: 35px;
  }
  .container--modal{
     width: 100%;
  }
+ .text-muted{
+    display: block;
+    margin-bottom: 10px;
+ }
 .tamanhoP,
 .tamanhoM,
 .tamanhoG{
-    width: 50%;
-    height: 50px;
-    padding: 4%;
+    text-align: start !important;
+    width: 40%;
+    height: 30px;
+    /* padding: 4%; */
     font-size: 0.8rem;
-    line-height: 14px;
+    line-height: 24px;
     background-color: rgb(99, 140, 250);
     border: 1px solid #e6e6e6;
 }
@@ -55,4 +73,8 @@ body{
 .tamanhoM,
 .tamanhoG:hover{
     cursor: pointer;
+}
+
+.modal-footer{
+    flex-wrap: nowrap !important;
 }

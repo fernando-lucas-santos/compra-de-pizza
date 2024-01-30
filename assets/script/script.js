@@ -5,7 +5,7 @@ const cALL = (el)=> document.querySelector(el)
 
   
 pizzaJson.map((element, index)=>{
-  let pizzaItem = c('.container-geral ').cloneNode(true)
+  let pizzaItem = c('.container-modelos ').cloneNode(true)
 
 
   pizzaItem.querySelector('.imagem img').src = element.img
