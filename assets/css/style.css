@@ -48,17 +48,22 @@ body{
     display: block;
     margin-bottom: 10px;
  }
+ .preco .valor--pizza{
+    /* margin-top: 20px; */
+    font-weight: bolder;
+    font-size: 1.2em;
+ }
 .tamanhoP,
 .tamanhoM,
 .tamanhoG{
     text-align: start !important;
     width: 40%;
     height: 30px;
-    /* padding: 4%; */
     font-size: 0.8rem;
     line-height: 24px;
-    background-color: rgb(99, 140, 250);
+    background-color: rgb(186, 188, 194);
     border: 1px solid #e6e6e6;
+    cursor: pointer;
 }
 .tamanhoP{
     border-top-left-radius: 8px;
@@ -69,12 +74,50 @@ body{
     border-bottom-right-radius: 8px;
 }
 
-.tamanhoP,
-.tamanhoM,
+.tamanhoP:hover,
+.tamanhoM:hover,
 .tamanhoG:hover{
+    background-color: rgb(143, 144, 148);
+}
+.active{
+    background-color: rgb(5, 152, 250);
+    font-weight: 600;
+    color: #fff;
+}
+.active:hover{
+    background-color: rgb(5, 152, 250);
+}
+
+.qt--Pizza{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0 5px;
+    background-color: rgb(163, 223, 223);
+}
+.menos,
+.mais,
+.qt--num{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    width: 15px;
+    
+    
+}
+.menos{
+    border-right: solid 1px #fff;
+    line-height: 28px;
+    cursor: pointer;
+}
+.mais{
+    border-left: solid 1px #fff;
+    line-height: 28px; 
     cursor: pointer;
 }
 
 .modal-footer{
-    flex-wrap: nowrap !important;
+    flex-wrap: nowrap !important; 
 }
