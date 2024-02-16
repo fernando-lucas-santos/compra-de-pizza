@@ -1,22 +1,26 @@
 const c = (el)=> document.querySelector(el)
 const cALL = (el)=> document.querySelectorAll(el)
 let modalQt = 1
+let carrinho = []
+let key = 0 
 
 
   
 pizzaJson.map((element, index)=>{
   let pizzaItem = c('.container-modelos ').cloneNode(true)
-
+  // preenchendo informaçoes no modal
   pizzaItem.setAttribute('data-key', index) // coloca o atributo data-key com a chave index associado
   pizzaItem.querySelector('.imagem img').src = element.img
   pizzaItem.querySelector('.descricao .name').innerHTML = element.name
   pizzaItem.querySelector('.price').innerHTML = `R$ ${element.price.toFixed(2)}`
   pizzaItem.querySelector('.descricao p').innerHTML = element.description
   
+  // quando o modal é aberto pega as informaçoes da pizza clicada
   pizzaItem.querySelector('a').addEventListener('click',(e)=>{
     modalQt = 1
 
-    let key = e.target.closest('.container-modelos').getAttribute('data-key') // volta uma class a cima para celecionar o atributo
+    let key = e.target.closest('.container-modelos').getAttribute('data-key') // closest volta uma class a cima para celecionar a classe e depois coloca o atributo
+    
     c('.img-modal img').src = pizzaJson[key].img
     c('.container--modal h5').innerHTML = pizzaJson[key].name
     c('.container--modal p').innerHTML = pizzaJson[key].description
@@ -31,9 +35,38 @@ pizzaJson.map((element, index)=>{
      })
      
      c('.qt--num').innerHTML = modalQt
-    
-    
   })
+
   document.querySelector('.pizzaArea').append(pizzaItem)
    
+})
+
+//açoes modal
+
+
+c('.qt--Pizza .menos').addEventListener('click' ,()=>{
+  
+  if(modalQt > 1){
+    modalQt--
+    c('.qt--num').innerHTML = modalQt
+  }  
+ 
+})
+
+document.querySelector('.qt--Pizza .mais').addEventListener('click' , ()=>{
+  modalQt++
+  c('.qt--num').innerHTML = modalQt
+})
+
+cALL('.tamanhos .tam').forEach((el , tamIndex)=> {
+  el.addEventListener('click', ()=>{
+    c('.tam.active').classList.remove('active')
+    el.classList.add('active')
+  })
+
+})
+c('.add_btn').addEventListener('click ',()=>{
+  // qual a Prizza
+  // qual o Tamanho
+  // quantas Pizzas
 })
