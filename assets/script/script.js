@@ -2,7 +2,7 @@ const c = (el)=> document.querySelector(el)
 const cALL = (el)=> document.querySelectorAll(el)
 let modalQt = 1
 let carrinho = []
-let key = 0 
+let modalkey = 0 
 
 
   
@@ -17,10 +17,11 @@ pizzaJson.map((element, index)=>{
   
   // quando o modal é aberto pega as informaçoes da pizza clicada
   pizzaItem.querySelector('a').addEventListener('click',(e)=>{
-    modalQt = 1
-
-    let key = e.target.closest('.container-modelos').getAttribute('data-key') // closest volta uma class a cima para celecionar a classe e depois coloca o atributo
     
+    let key = e.target.closest('.container-modelos').getAttribute('data-key') // closest volta uma class a cima para celecionar a classe e depois coloca o atributo
+    modalQt = 1
+    modalkey = key
+
     c('.img-modal img').src = pizzaJson[key].img
     c('.container--modal h5').innerHTML = pizzaJson[key].name
     c('.container--modal p').innerHTML = pizzaJson[key].description
@@ -65,8 +66,27 @@ cALL('.tamanhos .tam').forEach((el , tamIndex)=> {
   })
 
 })
-c('.add_btn').addEventListener('click ',()=>{
-  // qual a Prizza
-  // qual o Tamanho
-  // quantas Pizzas
+
+//açao para add ao carrinho
+
+c('.add_btn').addEventListener('click',()=>{
+  let tam = parseInt(c('.tam.active').getAttribute('data-key'))
+
+  let identificador = pizzaJson[modalkey].id+'@'+tam
+  
+  let key = carrinho.findIndex((item)=>{
+    // console.log('meu key é: ' + key)
+    return item.identificador == identificador
+  })
+  if(key > -1){
+    carrinho[key].quantidade+= modalQt  }else{
+
+    carrinho.push([{
+      identificador,
+      id:pizzaJson[modalkey].id,
+      tam,
+      quantidade:modalQt
+    }])
+  }    
 })
+
