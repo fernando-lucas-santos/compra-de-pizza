@@ -75,9 +75,9 @@ c('.add_btn').addEventListener('click',()=>{
   let identificador = pizzaJson[modalkey].id+'@'+tam
   
   let key = carrinho.findIndex((item)=>{
-    // console.log('meu key é: ' + key)
     return item.identificador == identificador
   })
+  
   if(key > -1){
     carrinho[key].quantidade+= modalQt  }else{
 

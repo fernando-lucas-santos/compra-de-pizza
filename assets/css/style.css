@@ -30,8 +30,7 @@ body{
 
  /* modal */
  .modal-dialog {
-    max-width: 700px !important;
-   
+    max-width: 900px !important;   
  }
  .modal-body{
     margin: 30px 0px;
@@ -88,7 +87,8 @@ body{
     background-color: rgb(5, 152, 250);
 }
 
-.qt--Pizza{
+.qt--Pizza,
+.car--qt{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -103,10 +103,9 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 1em;
-    width: 15px;
-    
-    
+    width: 15px;    
 }
+
 .menos{
     border-right: solid 1px #fff;
     line-height: 28px;
@@ -120,4 +119,70 @@ body{
 
 .modal-footer{
     flex-wrap: nowrap !important; 
+}
+/*canvas janela lateral*/
+.btn-close{
+    font-size: 1.2rem  !important;
+}
+
+.offcanvas-body{
+    font-size: 2rem;
+}
+.subtotal,
+.desconto,
+.total{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid #000;
+    
+}
+.btn_finalizar{
+    width: 80%;
+    height: 50px;
+    font-size: 1.3rem !important;
+    margin-top: 50px;
+}
+.canvas--img{
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 40px;
+}
+
+.car--img{
+    align-items: center !important;
+    width: 20%;
+}    
+
+.car--qt{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 30%;
+    padding: 0 5px;
+    background-color: #fff;
+}
+
+.car--menos,
+.car--mais,
+.car--num{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    width: 100%;
+  
+}
+
+.car--menos{
+    border-right: solid 1px #cccbcb;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.car--mais{
+    border-left: solid 1px #cccbcb;
+    line-height: 28px; 
+    cursor: pointer;
 }

@@ -32,7 +32,7 @@
         </div>
     </div>
  
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal modal-lg fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered ">
       <div class="modal-content">
         <div class="d-flex justify-content-end my-3 mx-3">
@@ -82,15 +82,46 @@
     </div>
   </div>
     
-    
-    
-    <h1>Pizzas</h1>
-    <div class="pizzaArea container-fluid row row-cols-3 m-auto">
-            
-    </div>
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
 
-    <script src="assets/script/pizzas.js"></script>
-    <script src="assets/script/script.js"></script>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    
+    <div class="offcanvas-body bg-info">
+
+      <div class="offcanvas-header ">
+        <h1 class="offcanvas-title" id="offcanvasRightLabel">Carrinho</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="canvas--img d-flex">
+        <div class="car--img d-flex">
+          <img src="assets/images/pizza.png" width="100%" alt="">
+        </div>
+        <div class="car--qt d-flex">
+          <div class="car--menos">-</div>
+          <div class="car--num">1</div>
+          <div class="car--mais">+</div>
+        </div>
+
+      </div>
+      <div class="subtotal">Subtotal <span>R$</span></div>
+      <div class="desconto">Desconto <span>R$</span></div>
+      <div class="total">Total <span>R$</span></div>
+
+      <footer class="footer_btn container-fluid d-flex justify-content-center">
+        <button class="btn_finalizar btn btn-success">Finalizar Compra</button>
+      </footer>
+    </div>
+    
+    
+  </div>
+    
+  <h1>Pizzas</h1>
+  <div class="pizzaArea container-fluid row row-cols-3 m-auto">
+            
+  </div>
+
+  <script src="assets/script/pizzas.js"></script>
+  <script src="assets/script/script.js"></script>
         
 </body>
 </html>
