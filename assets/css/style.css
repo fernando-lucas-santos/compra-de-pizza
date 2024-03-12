@@ -2,11 +2,6 @@ body{
     background-color: #e6e6e6 !important;
 }
 
-/* modelo */
-/* .container-modelos{
-    min-width: 300px;
-    margin: auto;
-} */
 .adicionar{
     display: flex;
     justify-content: center;
